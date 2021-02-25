@@ -1,7 +1,9 @@
 <div>
-    <div class="footer-form-warp bg-light">               
+    <div class="footer-form-warp bg-light">
         <div class="section-title">
-            <div class="sub-title">Registration</div>
+            <div class="sub-title">
+                Registration
+            </div>
             <div>
                 @if (session()->has('success'))
                     <div class="alert alert-success">
@@ -49,7 +51,7 @@
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-               
+
                 </div>
 
 
@@ -64,14 +66,14 @@
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-               
+
                 </div>
 
-              
+
 
                 <div class="col-lg-10">
                     <input type="text" wire:model="email" name="email" value="{{ old('email') }}" class="form-control text-dark @error('email') is-invalid @enderror" placeholder="email">
-               
+
                     @error('email')
                     <span class="invalid-feedback text-danger " role="alert">
                         <strong>{{ $message }}</strong>
@@ -79,8 +81,8 @@
                 @enderror
                 </div>
 
-           
-               
+
+
                 <div class="col-lg-12 row">
                     <div class="col-lg-6">
                         <input type="password" wire:model.lazy="password" name="password"  class="form-control text-dark @error('password') is-invalid @enderror"  placeholder="Password">
@@ -97,6 +99,7 @@
                 </div>
                 <div class="col-lg-12">
                     <button class="site__btn" type="submit">Register Now</button>
+                    <a href="/" class="btn btn-success float-right">Login</a>
                 </div>
             </div>
         </form>
